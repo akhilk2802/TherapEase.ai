@@ -1,0 +1,28 @@
+// Layout.scss
+
+.layout-container {
+  max-width: 1200px;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+.left-column {
+  background-color: #f8f9fa; /* Example background color for the left column */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-column {
+  background-color: #ffffff; /* Example background color for the right column */
+}
+
+.right-row {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

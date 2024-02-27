@@ -1,6 +1,7 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 import "../styles/css/Home.css";
+import Login from "./Login";
 
 const Home = () => {
   return (
@@ -8,6 +9,11 @@ const Home = () => {
       <div className="home-content">
         <h1 className="home-title">Welcome to TherapEase.ai</h1>
         <p>We'll be back soon, under construction</p>
+        {/* <Container className="form-container">
+          <Button href="/login" variant="secondary" type="submit">
+            Login
+          </Button>
+        </Container> */}
       </div>
     </Container>
   );
