@@ -1,0 +1,10 @@
+.header {
+  background-color: #3498db;
+  padding: 15px;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+}/*# sourceMappingURL=Header.css.map */
