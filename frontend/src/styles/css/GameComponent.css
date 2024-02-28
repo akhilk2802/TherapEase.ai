@@ -1,26 +1,47 @@
-.layout-container {
-  max-width: 1200px;
-  max-height: 100vh;
-  margin: 0 auto;
+.two-column-layout {
   padding: 5rem;
 }
 
-.left-column {
-  background-color: #f8f9fa; /* Example background color for the left column */
-  padding: 20px;
+.left-column,
+.right-column {
   border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  height: 40rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.right-column {
-  background-color: #ffffff; /* Example background color for the right column */
+.button-option {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #3498db;
+  color: #3498db;
+  background-color: #fff;
+}
+.button-option:hover {
+  background-color: #3498db;
+  color: #fff;
 }
 
 .right-row {
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .left-column,
+  .right-column {
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=GameComponent.css.map */
