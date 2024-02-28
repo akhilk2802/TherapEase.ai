@@ -69,12 +69,3 @@ This is a mental health game application built with Node.js and React. The appli
 
 4. Play mental health games and track response times for each question.
 
-## Deployment
-
-To deploy this application, follow the deployment guidelines for Node.js and React applications. You can deploy the server and client separately or together.
-
-
-
----
-
-Feel free to customize this README file with additional information or sections as needed. Let me know if you need further assistance!
