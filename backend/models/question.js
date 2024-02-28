@@ -17,8 +17,7 @@ const questionSchema = new mongoose.Schema({
         required: true
     },
     responseTime: {
-        type: Number,
-        required: true
+        type: Number
     }
 });
 
@@ -29,7 +28,7 @@ function validateQuestion(question){
         patientId: Joi.objectId().required(),
         question: Joi.string().min(2).max(5000).required(),
         answer: Joi.string().min(2).max(5000).required(),
-        responseTime: Joi.number().required()
+        responseTime: Joi.number()
     });
 
     return schema.validate(question);
