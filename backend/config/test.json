@@ -1,0 +1,4 @@
+{
+    "name": "TherapEase.AI - Test",
+    "db": "mongodb://localhost/therapease"
+}
