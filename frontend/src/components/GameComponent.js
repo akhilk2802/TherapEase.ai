@@ -121,8 +121,16 @@ const GameComponent = () => {
 
     setCurrentScenarioIndex((prevIndex) => prevIndex + 1);
   };
-
-  const isLastScenario = currentScenarioIndex === scenarios.length - 1;
+  const handleFinish = async () => {
+    const url = "http://127.0.0.1:8000/api/questions/patientId";
+    try {
+      const response = await axios.get(url, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    } catch (error) {}
+  };
 
   return (
     <>
@@ -160,9 +168,11 @@ const GameComponent = () => {
         </Container>
       )}
       {currentScenarioIndex === scenarios.length && (
-        <Container>
+        <Container className="container-completed">
           <h2>Game Completed!</h2>
-          <Button>Finish</Button>
+          <Button className="button-finish" onClick={handleFinish}>
+            Finish
+          </Button>
         </Container>
       )}
     </>

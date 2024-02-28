@@ -41,6 +41,20 @@
   flex-direction: column;
 }
 
+.container-completed {
+  display: flex;
+  padding: 20rem;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  .button-finish {
+    width: 20rem;
+    display: block;
+  }
+}
+
 @media (max-width: 767px) {
   .left-column,
   .right-column {
