@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const _ = require('lodash');
 const { Patient, validate } = require('../models/patient');
-const { User } = require('../models/user');
 const session = require('../middleware/session');
 
 router.get('/', session, async (req, res) => {

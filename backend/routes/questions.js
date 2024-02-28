@@ -3,7 +3,7 @@ const router = express.Router();
 const _ = require('lodash');
 const { Question, validate } = require('../models/question');
 const { Patient } = require('../models/patient');
-const session = require('../middleware/session');
+// const session = require('../middleware/session');
 
 router.get('/', async (req, res) => {
     const questions = await Question.find();
@@ -14,27 +14,26 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-    const questions = await Question.find({ userId: req.params.id });
+
+    const questions = await Question.find({ 'patient._id': req.params.id });
 
     if (questions.length === 0) return res.status(404).send('The question for given user not found.');
-    res.send(questions);
+    res.send(_.map(questions, obj => _.pick(obj, ['question', 'answer', 'responseTime'])));
 });
 
 router.post('/', async (req, res) => {
-
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
     const patient = await Patient.findById(req.body.patientId);
-
     if (!patient) return res.status(404).send('Invalid patient.');
     
-    question = new Question({
+    let question = new Question({
         patient,
         ...req.body
     });
-    
     question = await question.save();
+
     res.send(question);
 });
 
