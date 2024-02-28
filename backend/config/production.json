@@ -1,0 +1,7 @@
+{
+    "name": "TherapEase.AI - Production",
+    "mail": {
+        "host": "prod-mail-server"
+    },
+    "db": "mongodb://localhost/therapease"
+}
