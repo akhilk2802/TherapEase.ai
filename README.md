@@ -1,8 +1,5 @@
 # TherapEase.ai
 
-Sure, here's a sample README file for your Node.js and React mental health application:
-
----
 
 # Mental Health Game Application
 
