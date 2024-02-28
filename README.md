@@ -38,7 +38,7 @@ BART -> https://huggingface.co/facebook/bart-large-cnn
 2. Navigate to the project directory:
 
     ```
-    cd mental-health-game
+    cd TherapEase.ai
     ```
 
 3. Install dependencies for the server:
@@ -50,7 +50,7 @@ BART -> https://huggingface.co/facebook/bart-large-cnn
 4. Navigate to the client directory:
 
     ```
-    cd client
+    cd frontend
     ```
 
 5. Install dependencies for the client:
@@ -64,17 +64,18 @@ BART -> https://huggingface.co/facebook/bart-large-cnn
 1. Start the server:
 
     ```
-    npm start
+    cd backend
+    node index.js
     ```
 
 2. Start the client:
 
     ```
-    cd client
+    cd frontend
     npm start
     ```
 
 3. Open your browser and navigate to `http://localhost:3000` to access the application.
 
-4. Play mental health games and track response times for each question.
+4. Play mental health game, the rest is taken care by our backend and summary is viewed in doctors/therapist view window.
 
