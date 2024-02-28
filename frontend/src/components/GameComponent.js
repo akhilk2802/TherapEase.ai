@@ -89,7 +89,7 @@ const GameComponent = () => {
               <p>Scenario Image.</p>
             </Col>
             <Col md={6} className="right-column">
-              <Row className="right-row">
+              <Row className="right-row hidden">
                 <h2>{scenarios[currentScenarioIndex].question}</h2>
               </Row>
               <Row className="right-row">
