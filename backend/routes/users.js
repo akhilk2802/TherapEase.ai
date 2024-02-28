@@ -27,11 +27,6 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const user = createUser(req, res);
-    res.send(_.pick(user, ['_id', 'name', 'mobileNumber']));
-});
-
-async function createUser(req, res) {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
@@ -42,8 +37,7 @@ async function createUser(req, res) {
     
     await user.save();
 
-    return user;
-}
+    res.send(_.pick(user, ['_id', 'name', 'mobileNumber']));
+});
 
-exports.createUser = createUser;
 exports.user = router;

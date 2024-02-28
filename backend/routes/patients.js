@@ -2,11 +2,10 @@ const express = require('express');
 const router = express.Router();
 const _ = require('lodash');
 const { Patient, validate } = require('../models/patient');
-const { User } = require('../models/user');
 const session = require('../middleware/session');
 
 router.get('/', session, async (req, res) => {
-    const patients = await Patient.find().sort('title');
+    const patients = await Patient.find().sort('name');
     
     if (patients.length === 0) 
         return res.status(404).send('No patients found!!');
