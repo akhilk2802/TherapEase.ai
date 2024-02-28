@@ -1,6 +1,9 @@
 .two-column-layout {
   padding: 5rem;
 }
+.two-column-layout .hidden {
+  display: none;
+}
 
 .left-column,
 .right-column {
