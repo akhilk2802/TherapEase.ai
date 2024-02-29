@@ -8,7 +8,7 @@ const Home = () => {
     <Container className="home-container">
       <div className="home-content">
         <h1 className="home-title">Welcome to TherapEase.ai</h1>
-        <p>We'll be back soon, under construction</p>
+        <p>Coming soon, under construction!</p>
         {/* <Container className="form-container">
           <Button href="/login" variant="secondary" type="submit">
             Login
