@@ -1,83 +1,117 @@
-# TherapEase.ai
+# TherapEase.ai - Mental Health Game Application
 
+## 📌 Overview
+TherapEase.ai is an **AI-powered mental health game application** built with the **MERN stack** and **machine learning models** (BART & Stable Diffusion-XL). The application engages users with **Pictionary-style mental health games**, where **response times** provide **therapists with insights into a patient's mental state**. 
 
-# Mental Health Game Application
+---
 
-This is a mental health game application built with MERN stack and using Machine learning models - BART and Stable Diffusion-Xl. The application allows users to play games using pictures, and based on the response times for each question, therapists can gain insights into the patient's mental state.
+## 🚀 Features
+- **Interactive Mental Health Games**: Play games similar to **Pictionary**, using AI-generated images.
+- **AI-Generated Images**: **Stable Diffusion-XL** dynamically creates game images in real time.
+- **Therapist Dashboard**:
+  - Add new **questions** and assign **scores**.
+  - Track **response times** to assess patient behavior.
+  - View **summaries & visualizations** of patient performance.
+- **Patient Classification**: Uses **WHO-defined behavioral patterns** to categorize patient status.
+- **Insightful Analysis**: Helps therapists **evaluate mental health trends** based on user responses.
 
-## Features
+---
 
-- Play mental health games using pictures. Similar to Pictionary.
-- Pictures for pictionary game are generated using Stable Diffusion-XL on the go.
-- Therapist are allowed to add new questions, and their respected scores.
-- Track response times for each question.
-- Therapists can gain insights into the patient's mental state based on response times.
-- Therapist will be provided with the summary and visualization of all the parameters from the Pictionary Game
-- We have classified the patients status it based on the parameters and behavioural patterns as stated by WHO.
+## 🛠️ Technologies Used
+- **Backend**: Node.js, Express.js
+- **Frontend**: React.js
+- **Database**: MongoDB (Optional, for storing user data & game results)
+- **Machine Learning Models**:
+  - **BART (Bidirectional & Autoregressive Transformer)**: Used for **text classification, summarization, and comprehension** tasks.
+    - [BART Model](https://huggingface.co/facebook/bart-large-cnn)
+  - **Stable Diffusion-XL**: Generates AI-powered images for the game.
 
-## Technologies Used
+---
 
-- Node.js
-- React
-- Express.js
-- MongoDB (optional, for storing user data and game results)
-- Machine Learning Model - BART, Stable Diffusion-XL.
+## Folder Structure
+```plaintext
+├── Model
+├── backend
+│   ├── config
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   └── startup
+└── frontend
+    ├── public
+    └── src
+        ├── assets
+        │   └── images
+        │       ├── ClearThinking
+        │       ├── Crying
+        │       ├── DifficultDecisionMaking
+        │       ├── Digestion
+        │       ├── Fatigue
+        │       ├── Frightened
+        │       ├── Headache
+        │       ├── LifeParticipation
+        │       ├── Loss_appetite
+        │       ├── LostInterest
+        │       ├── Nervousness
+        │       ├── NoEnjoyment
+        │       ├── Selfworth
+        │       ├── ShakingHands
+        │       ├── Sleep
+        │       ├── StomachDiscomfort
+        │       ├── SuicidalThought
+        │       ├── Tiredness
+        │       ├── Unhappiness
+        │       └── WorkSuffering
+        ├── components
+        └── styles
+            ├── css
+            └── scss
+```
 
-- BART is a transformer encoder-encoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text.
-BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering). This particular checkpoint has been fine-tuned on CNN Daily Mail, a large collection of text-summary pairs.
+## 🔧 Installation
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/akhilk2802/TherapEase.ai.git
+cd TherapEase.ai
+```
 
-BART -> https://huggingface.co/facebook/bart-large-cnn
+### 2️⃣ Install Server Dependencies
+```sh
+cd backend
+npm install
+```
 
+### 3️⃣ Install Client Dependencies
+```sh
+cd frontend
+npm install
+```
 
-## Installation
+---
 
-1. Clone the repository:
+## 🚀 Usage
+### 1️⃣ Start the Server
+```sh
+cd backend
+node index.js
+```
 
-    ```
-    git clone https://github.com/your-username/TherapEase.ai.git
-    ```
+### 2️⃣ Start the Client
+```sh
+cd frontend
+npm start
+```
 
-2. Navigate to the project directory:
+### 3️⃣ Access the Application
+Open your browser and navigate to:
+```
+http://localhost:3000
+```
 
-    ```
-    cd TherapEase.ai
-    ```
+- Play **mental health games**, and let the backend handle the analysis.
+- **Therapists can view summaries & insights** in the **dashboard view**.
 
-3. Install dependencies for the server:
+---
 
-    ```
-    npm install
-    ```
-
-4. Navigate to the client directory:
-
-    ```
-    cd frontend
-    ```
-
-5. Install dependencies for the client:
-
-    ```
-    npm install
-    ```
-
-## Usage
-
-1. Start the server:
-
-    ```
-    cd backend
-    node index.js
-    ```
-
-2. Start the client:
-
-    ```
-    cd frontend
-    npm start
-    ```
-
-3. Open your browser and navigate to `http://localhost:3000` to access the application.
-
-4. Play mental health game, the rest is taken care by our backend and summary is viewed in doctors/therapist view window.
+🚀 **Empowering Mental Health with AI - TherapEase.ai!**
 
